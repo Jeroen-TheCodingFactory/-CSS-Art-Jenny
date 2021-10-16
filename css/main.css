@@ -1,0 +1,393 @@
+*,*::before,*::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 62.5%;
+}
+body{
+  background-color: #eeeeee;
+  display:flex;
+  height:100vh;
+  max-width: 100vw;
+  align-items: center;
+  justify-content: center;
+}
+
+.jenny{
+  width:auto;
+  height:auto;
+  position: relative;
+  transform: scale(0.6);
+}
+
+.jenny__head{
+  height: 35rem;
+  width:35rem;
+  background-color: #FFF;
+  border:0.5rem solid black;
+  border-right:0.5rem solid transparent;
+  border-radius: 50%;
+  transform:rotate(110deg);
+  overflow: hidden;
+}
+
+
+.jenny__chin{
+  width:38rem;
+  height:35rem;
+  background-color: white;
+  position: absolute;
+  left:-0.4%;
+  border: 0.5rem solid black;
+  top:0%;
+  border-radius: 50%;
+  clip-path: polygon(0% 70%, 100% 70%, 100% 100%, 0% 100%);
+}
+
+
+.jenny__chinLine{
+  width: 3.3rem;
+  height:0.5rem;
+  background-color: black;
+  position: absolute;
+  top:69%;
+  left:33rem;
+  z-index: 1;
+}
+.jenny__eye{
+  height: 43%;
+  width: 27%;
+  background-color: #fff;
+  position: absolute;
+  border-top-left-radius: 8rem;
+  border-top-right-radius: 8rem;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  border:0.5rem solid black;
+  overflow: hidden;
+  animation: blink;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+.jenny__eye--left{
+  top:27%;
+  left:18%;
+}
+
+.jenny__eye--right{
+  top:27%;
+  right:18%;
+}
+
+.jenny__eye__inner{
+  position: absolute;
+  height: 70%;
+  width: 50%;
+  background-color: black;
+  transform: translate(-50%,-50%);
+  border-radius: 50%;
+}
+
+.jenny__eye__inner::before{
+  content:"";
+  position: absolute;
+  top:50%;
+  left:50%;
+  width:80%;
+  height:20%;
+  background-color: #fff;
+  transform:translate(-50%,-50%) skewY(20deg);
+}
+
+.jenny__eye__inner--left{
+  top:50%;
+  left:50%;
+}
+
+.jenny__eye__inner--right{
+  top:50%;
+  right:50%;
+}
+
+
+.jenny__mouth{
+  width: 30%;
+  height:20%;
+  position: absolute;
+  bottom:15%;
+  left:50%;
+  z-index: 1;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  border: 0.5rem solid transparent;
+  border-bottom:0.5rem solid black;
+}
+
+.jenny__hair{
+  position: absolute;
+  width:25rem;
+  height:25rem;
+  background-color: #4A9FAB;
+  z-index: 1;
+  border-radius: 50%;
+  clip-path: polygon(0% 70%, 100% 70%, 100% 100%, 0% 100%);
+}
+
+.jenny__hair--left{
+  transform:rotate(-48deg);
+  top:16rem;
+  left:-14rem;
+}
+
+.jenny__hair--middle{
+  transform:rotate(-58deg);
+  top:9rem;
+  left:-17rem;
+}
+
+.jenny__hair--right{
+  transform:rotate(250deg);
+  top:4rem;
+  left:-21rem;
+}
+
+.jenny__knot{
+  position: absolute;
+  background-color: white;
+  width: 10%;
+  height: 10%;
+  border-radius: 50%;
+  border:0.3rem solid black;
+  top:0;
+  transform: translateY(15%);
+}
+
+.jenny__knot--left{
+  left:23%;
+}
+
+
+.jenny__knot--right{
+  right:23%;
+}
+
+.jenny__knot__stripe{
+  width:100%;
+  height: 10%;
+  background-color: black;
+  position: absolute;
+  top:40%;
+  left:55%;
+
+}
+
+.jenny__knot__stripe--left{
+  transform:translate(-50%,50%) rotate(55deg);
+}
+
+
+
+.jenny__knot__stripe--right{
+  transform:translate(-50%,50%) rotate(-80deg);
+}
+
+.jenny__ear{
+  position: absolute;
+  height: 29rem;
+  width: 45rem;
+  background-color: #4A9FAB;
+  clip-path: polygon(0% 0%, 50% 0%, 50% 50%, 0% 50%);
+  border-radius:50%;
+  z-index: -1;
+  border: 0.5rem solid black;
+
+}
+
+.jenny__ear--left{
+  transform: rotate(-10deg);
+  top:-33%;
+  left:-35%;
+}
+
+.jenny__ear--right{
+  top:-25%;
+  right:-37%;
+  transform: rotate(45deg);
+}
+
+.jenny__triangle{
+  position: absolute;
+  width:9rem;
+  height:5rem;
+  clip-path: polygon(100% 0%, 100% 100%, 0% 100%);
+  background-color: #4A9FAB;
+}
+
+.jenny__triangle--left{
+  top:3.8rem;
+  left:-10.3rem;
+  transform: rotate(210deg);
+}
+
+.jenny__triangle--right{
+  top:-9rem;
+  left:8rem;
+  transform: rotate(-105deg);
+}
+
+.jenny__bottom-line-left-ear{
+  background-color: black;
+  position: absolute;
+  width: calc(30rem / 2);
+  height: 0.5rem;
+  top:3rem;
+  transform: rotate(-10deg);
+  left:-5rem;
+  z-index: -1;
+}
+
+.jenny__bottom-line-right-ear{
+  background-color: black;
+  position: absolute;
+  width: calc(35rem / 2);
+  height: 0.5rem;
+  top:-3rem;
+  transform: rotate(45deg);
+  left:10rem;
+  z-index: -1;
+}
+
+.jenny__side-line-left-ear{
+  background-color: black;
+  position: absolute;
+  width: calc(30rem / 2);
+  height: 0.5rem;
+  top:-4rem;
+  transform: rotate(80deg);
+  left:1.5rem;
+  z-index: -1;
+}
+
+.jenny__side-line-right-ear{
+  background-color: black;
+  position: absolute;
+  width: calc(25rem / 2);
+  height: 0.5rem;
+  top:-0.5rem;
+  transform: rotate(135deg);
+  left:25rem;
+  z-index: -1;
+}
+
+.jenny__side-line-left-triangle{
+  background-color: black;
+  position: absolute;
+  width: calc(23.3rem / 2);
+  height: 0.5rem;
+  top:6.2rem;
+  transform: rotate(0deg);
+  left:-12rem;
+  z-index: 1;
+}
+
+.jenny__side-line-right-triangle{
+  background-color: black;
+  position: absolute;
+  width: calc(19rem / 2);
+  height: 0.5rem;
+  top:-7rem;
+  transform: rotate(-135deg);
+  left:7.5rem;
+  z-index: 1;
+}
+
+.jenny__side-line-right-triangle--second{
+  background-color: black;
+  position: absolute;
+  width: calc(9rem / 2);
+  height: 0.5rem;
+  top:-11.1em;
+  transform: rotate(-31deg);
+  left:8.5rem;
+  z-index: 1;
+}
+
+
+.jenny__side--line-left-triangle--small{
+  background-color: black;
+  position: absolute;
+  width: calc(12rem / 2);
+  height: 0.5rem;
+  top:4.5rem;
+  transform: rotate(30deg);
+  left:-6rem;
+  z-index: 1;
+}
+
+.jenny__side--line-right-triangle--small{
+  background-color: black;
+  position: absolute;
+  width: calc(12rem / 2);
+  height: 0.5rem;
+  top:-6.1rem;
+  transform: rotate(75deg);
+  left:12rem;
+  z-index: 1;
+}
+
+.jenny__ear-oval{
+  position: absolute;
+  height: 4rem;
+  width: 16rem;
+  border-radius: 50%;
+  background-color: #eeeeee;
+  border-top: 0.5rem solid black;
+  z-index: -1;
+}
+
+.jenny__ear-oval--left{
+  top:1.5rem;
+  left:-6rem;
+  transform: rotate(-10deg);
+
+}
+
+.jenny__ear-oval--right{
+  top:-5rem;
+  left:10rem;
+  transform:rotate(45deg);
+}
+
+@media (min-width: 50rem){
+  .jenny{
+    transform:scale(0.9);
+  }
+}
+@keyframes blink{
+  0%{
+    transform: scaleY(1);
+    opacity: 1;
+    transform-origin: bottom;
+  }
+
+  85%{
+      transform: scaleY(1);
+          opacity: 1;
+          transform-origin: bottom;
+  }
+
+  95%{
+    transform: scaleY(0);
+        opacity: 0.7;
+        transform-origin: bottom;
+  }
+  100%{
+    transform: scaleY(1);
+    opacity: 0.7;
+    transform-origin: bottom;
+  }
+}
