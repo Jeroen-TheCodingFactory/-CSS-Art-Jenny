@@ -9,26 +9,28 @@ html{
 }
 
 :root{
+  /* Colors */
   --background-color: #eeeeee;
   --white-color: #FFF;
   --black-color: #000;
   --blue-color: #4A9FAB;
+  /* Scales */
+  --mobile-scale: scale(0.6);
+  --desktop-scale: scale(0.9);
 }
 
 body{
   background-color: var(--background-color);
-  display:flex;
   height:100vh;
   max-width: 100vw;
-  align-items: center;
-  justify-content: center;
+  overflow:hidden;
 }
 
 .jenny{
   width:auto;
   height:auto;
   position: relative;
-  transform: scale(0.6);
+  transform: var(--mobile-scale);
 }
 
 .jenny__head{
@@ -52,6 +54,7 @@ body{
   border: 0.5rem solid var(--black-color);
   top:0%;
   border-radius: 50%;
+  -webkit-clip-path: polygon(0% 70%, 100% 70%, 100% 100%, 0% 100%);
   clip-path: polygon(0% 70%, 100% 70%, 100% 100%, 0% 100%);
 }
 
@@ -141,6 +144,7 @@ body{
   background-color: var(--blue-color);
   z-index: 1;
   border-radius: 50%;
+  -webkit-clip-path: polygon(0% 70%, 100% 70%, 100% 100%, 0% 100%);
   clip-path: polygon(0% 70%, 100% 70%, 100% 100%, 0% 100%);
 }
 
@@ -207,6 +211,7 @@ body{
   height: 29rem;
   width: 45rem;
   background-color: var(--blue-color);
+  -webkit-clip-path: polygon(0% 0%, 50% 0%, 50% 50%, 0% 50%);
   clip-path: polygon(0% 0%, 50% 0%, 50% 50%, 0% 50%);
   border-radius:50%;
   z-index: -1;
@@ -230,6 +235,7 @@ body{
   position: absolute;
   width:9rem;
   height:5rem;
+  -webkit-clip-path: polygon(100% 0%, 100% 100%, 0% 100%);
   clip-path: polygon(100% 0%, 100% 100%, 0% 100%);
   background-color: var(--blue-color);
 }
@@ -360,7 +366,6 @@ body{
   top:1.5rem;
   left:-6rem;
   transform: rotate(-10deg);
-
 }
 
 .jenny__ear-oval--right{
@@ -369,12 +374,21 @@ body{
   transform:rotate(45deg);
 }
 
+/* Utilities */
+.u-flex-center{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Media Queries */
 @media (min-width: 50rem){
   .jenny{
-    transform:scale(0.9);
+    transform: var(--desktop-scale);
   }
 }
 
+/* Keyframes */
 @keyframes blink{
   0%{
     transform: scaleY(1);
