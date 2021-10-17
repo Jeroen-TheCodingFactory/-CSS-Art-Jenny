@@ -7,8 +7,16 @@
 html{
   font-size: 62.5%;
 }
+
+:root{
+  --background-color: #eeeeee;
+  --white-color: #FFF;
+  --black-color: #000;
+  --blue-color: #4A9FAB;
+}
+
 body{
-  background-color: #eeeeee;
+  background-color: var(--background-color);
   display:flex;
   height:100vh;
   max-width: 100vw;
@@ -26,8 +34,8 @@ body{
 .jenny__head{
   height: 35rem;
   width:35rem;
-  background-color: #FFF;
-  border:0.5rem solid black;
+  background-color: var(--white-color);
+  border:0.5rem solid var(--black-color);
   border-right:0.5rem solid transparent;
   border-radius: 50%;
   transform:rotate(110deg);
@@ -38,10 +46,10 @@ body{
 .jenny__chin{
   width:38rem;
   height:35rem;
-  background-color: white;
+  background-color: var(--white-color);
   position: absolute;
   left:-0.4%;
-  border: 0.5rem solid black;
+  border: 0.5rem solid var(--black-color);
   top:0%;
   border-radius: 50%;
   clip-path: polygon(0% 70%, 100% 70%, 100% 100%, 0% 100%);
@@ -51,7 +59,7 @@ body{
 .jenny__chinLine{
   width: 3.3rem;
   height:0.5rem;
-  background-color: black;
+  background-color: var(--black-color);
   position: absolute;
   top:69%;
   left:33rem;
@@ -60,13 +68,13 @@ body{
 .jenny__eye{
   height: 43%;
   width: 27%;
-  background-color: #fff;
+  background-color: var(--white-color);
   position: absolute;
   border-top-left-radius: 8rem;
   border-top-right-radius: 8rem;
   border-bottom-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
-  border:0.5rem solid black;
+  border:0.5rem solid var(--black-color);
   overflow: hidden;
   animation: blink;
   animation-duration: 3s;
@@ -87,9 +95,10 @@ body{
   position: absolute;
   height: 70%;
   width: 50%;
-  background-color: black;
+  background-color: var(--black-color);
   transform: translate(-50%,-50%);
   border-radius: 50%;
+  top:50%;
 }
 
 .jenny__eye__inner::before{
@@ -99,17 +108,15 @@ body{
   left:50%;
   width:80%;
   height:20%;
-  background-color: #fff;
+  background-color: var(--white-color);
   transform:translate(-50%,-50%) skewY(20deg);
 }
 
 .jenny__eye__inner--left{
-  top:50%;
   left:50%;
 }
 
 .jenny__eye__inner--right{
-  top:50%;
   right:50%;
 }
 
@@ -124,14 +131,14 @@ body{
   transform: translateX(-50%);
   border-radius: 50%;
   border: 0.5rem solid transparent;
-  border-bottom:0.5rem solid black;
+  border-bottom:0.5rem solid var(--black-color);
 }
 
 .jenny__hair{
   position: absolute;
   width:25rem;
   height:25rem;
-  background-color: #4A9FAB;
+  background-color: var(--blue-color);
   z-index: 1;
   border-radius: 50%;
   clip-path: polygon(0% 70%, 100% 70%, 100% 100%, 0% 100%);
@@ -157,11 +164,11 @@ body{
 
 .jenny__knot{
   position: absolute;
-  background-color: white;
+  background-color: var(--white-color);
   width: 10%;
   height: 10%;
   border-radius: 50%;
-  border:0.3rem solid black;
+  border:0.3rem solid var(--black-color);
   top:0;
   transform: translateY(15%);
 }
@@ -178,7 +185,7 @@ body{
 .jenny__knot__stripe{
   width:100%;
   height: 10%;
-  background-color: black;
+  background-color: var(--black-color);
   position: absolute;
   top:40%;
   left:55%;
@@ -199,11 +206,11 @@ body{
   position: absolute;
   height: 29rem;
   width: 45rem;
-  background-color: #4A9FAB;
+  background-color: var(--blue-color);
   clip-path: polygon(0% 0%, 50% 0%, 50% 50%, 0% 50%);
   border-radius:50%;
   z-index: -1;
-  border: 0.5rem solid black;
+  border: 0.5rem solid var(--black-color);
 
 }
 
@@ -224,7 +231,7 @@ body{
   width:9rem;
   height:5rem;
   clip-path: polygon(100% 0%, 100% 100%, 0% 100%);
-  background-color: #4A9FAB;
+  background-color: var(--blue-color);
 }
 
 .jenny__triangle--left{
@@ -240,7 +247,7 @@ body{
 }
 
 .jenny__bottom-line-left-ear{
-  background-color: black;
+  background-color: var(--black-color);
   position: absolute;
   width: calc(30rem / 2);
   height: 0.5rem;
@@ -251,7 +258,7 @@ body{
 }
 
 .jenny__bottom-line-right-ear{
-  background-color: black;
+  background-color: var(--black-color);
   position: absolute;
   width: calc(35rem / 2);
   height: 0.5rem;
@@ -262,7 +269,7 @@ body{
 }
 
 .jenny__side-line-left-ear{
-  background-color: black;
+  background-color: var(--black-color);
   position: absolute;
   width: calc(30rem / 2);
   height: 0.5rem;
@@ -273,7 +280,7 @@ body{
 }
 
 .jenny__side-line-right-ear{
-  background-color: black;
+  background-color: var(--black-color);
   position: absolute;
   width: calc(25rem / 2);
   height: 0.5rem;
@@ -284,7 +291,7 @@ body{
 }
 
 .jenny__side-line-left-triangle{
-  background-color: black;
+  background-color: var(--black-color);
   position: absolute;
   width: calc(23.3rem / 2);
   height: 0.5rem;
@@ -295,7 +302,7 @@ body{
 }
 
 .jenny__side-line-right-triangle{
-  background-color: black;
+  background-color: var(--black-color);
   position: absolute;
   width: calc(19rem / 2);
   height: 0.5rem;
@@ -306,7 +313,7 @@ body{
 }
 
 .jenny__side-line-right-triangle--second{
-  background-color: black;
+  background-color: var(--black-color);
   position: absolute;
   width: calc(9rem / 2);
   height: 0.5rem;
@@ -318,7 +325,7 @@ body{
 
 
 .jenny__side--line-left-triangle--small{
-  background-color: black;
+  background-color: var(--black-color);
   position: absolute;
   width: calc(12rem / 2);
   height: 0.5rem;
@@ -329,7 +336,7 @@ body{
 }
 
 .jenny__side--line-right-triangle--small{
-  background-color: black;
+  background-color: var(--black-color);
   position: absolute;
   width: calc(12rem / 2);
   height: 0.5rem;
@@ -345,7 +352,7 @@ body{
   width: 16rem;
   border-radius: 50%;
   background-color: #eeeeee;
-  border-top: 0.5rem solid black;
+  border-top: 0.5rem solid var(--black-color);
   z-index: -1;
 }
 
@@ -367,6 +374,7 @@ body{
     transform:scale(0.9);
   }
 }
+
 @keyframes blink{
   0%{
     transform: scaleY(1);
