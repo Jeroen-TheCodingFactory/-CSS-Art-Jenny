@@ -351,7 +351,7 @@ body{
   height: 4rem;
   width: 16rem;
   border-radius: 50%;
-  background-color: #eeeeee;
+  background-color: var(--background-color);
   border-top: 0.5rem solid var(--black-color);
   z-index: -1;
 }
